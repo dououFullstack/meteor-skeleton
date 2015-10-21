@@ -14,7 +14,13 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li class="{{active 'frontpage'}}"><a href="{{pathFor 'frontpage'}}">Home</a></li>
-          <li class="{{active 'documentsIndex'}}"><a href="{{pathFor 'documentsIndex'}}">Documents</a></li>
+          <!-- <li class="{{active 'documentsIndex'}}"><a href="{{pathFor 'documentsIndex'}}">Documents</a></li> -->
+          {{#if navHas "documents"}}
+            <li class="{{active 'documentsIndex'}}"><a href="{{pathFor 'documentsIndex'}}">Documents</a></li>
+          {{/if}}
+          {{#if navHas "posts"}}
+            <li class="{{active 'postsIndex'}}"><a href="{{pathFor 'postsIndex'}}">Posts</a></li>
+          {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="{{active 'about'}}"><a href="{{pathFor 'about'}}">About</a></li>
