@@ -46,8 +46,6 @@ launch-screen@1.0.4
 livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
-maodouio:posts@0.0.4
-matb33:collection-hooks@0.8.0
 meteor@1.1.9
 meteor-base@1.0.1
 minifiers@1.1.7
@@ -57,7 +55,6 @@ mobile-status-bar@1.0.6
 momentjs:moment@2.9.0
 mongo@1.1.2
 mongo-id@1.0.1
-mongo-livedata@1.0.9
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 ordered-dict@1.0.4

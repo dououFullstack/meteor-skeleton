@@ -13,7 +13,6 @@ alanning:roles
 accounts-base
 twbs:bootstrap
 momentjs:moment
-maodouio:posts
 standard-minifiers
 meteor-base
 mobile-experience
