@@ -15,6 +15,8 @@ Meteor.methods({
   getOpenIdByCode:function(code){
     // var appId = "wxf691ecaf9243c307";     // 毛豆
     // var appSecret = "731a3266530c51cdb44a81f9c0f23ff0";
+    var strPublic = Meteor.settings.public;
+    console.log(strPublic);
     var appId = "wx3175e8b7a6a40895";
     var appSecret = "061a568248ed8a1b3bcf51a91b94ae03";
     // var appId = "wx82c1c3c2d9b3832c";    // taolizhizhao

@@ -9,22 +9,22 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'frontpage'}}">Meteor-skeleton</a>
+        <a class="navbar-brand" href="{{pathFor 'frontpage'}}">毛豆网MBaaS平台</a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="{{active 'frontpage'}}"><a href="{{pathFor 'frontpage'}}">Home</a></li>
+          <li class="{{active 'frontpage'}}"><a href="{{pathFor 'frontpage'}}">首页</a></li>
           <!-- <li class="{{active 'documentsIndex'}}"><a href="{{pathFor 'documentsIndex'}}">Documents</a></li> -->
           {{#if navHas "documents"}}
-            <li class="{{active 'documentsIndex'}}"><a href="{{pathFor 'documentsIndex'}}">Documents</a></li>
+            <li class="{{active 'documentsIndex'}}"><a href="{{pathFor 'documentsIndex'}}">文章</a></li>
           {{/if}}
           {{#if navHas "posts"}}
-            <li class="{{active 'postsIndex'}}"><a href="{{pathFor 'postsIndex'}}">Posts</a></li>
+            <li class="{{active 'postsIndex'}}"><a href="{{pathFor 'postsIndex'}}">博客</a></li>
           {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li class="{{active 'about'}}"><a href="{{pathFor 'about'}}">About</a></li>
-          <li><a href="https://github.com/kjetilhau/meteor-skeleton">Github</a></li>
+          <li class="{{active 'about'}}"><a href="{{pathFor 'about'}}">关于我们</a></li>
+          <li><a href="https://github.com/maodouio/meteor-skeleton" target="_blank">Github</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
