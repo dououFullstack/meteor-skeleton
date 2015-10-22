@@ -1,0 +1,29 @@
+<template name="profileCard">
+  <div class="profileInfo">
+    {{#with profile}}       
+        <img class="profileImg animated fadeInUp" src="{{headimgurl}}">
+        <h2>{{nickname}}</h2>
+        <p> {{province}} {{city}} @{{country}} </p>
+    {{/with}}
+  </div>
+</template>
+
+<template name="profile">
+      <div class="profile_header">
+
+        <div class="log_out_button">
+        <button data-action="sign-out" class="button button-small button-energized sign-in-button">
+          退出</button></div>
+
+        {{#if currentUser}}
+            {{#with currentUser}}   
+              <!-- <p class="pull-right">{{username}}, {{_id}}</p> -->
+              {{> profileCard profile=profile}}
+            {{/with}} 
+              <!-- show two Lists -->
+        {{else}} 
+          {{> wechatLogin}}  
+        {{/if}}
+
+      </div>
+</template>
