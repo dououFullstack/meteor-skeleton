@@ -4,8 +4,9 @@ Template.header.helpers({
     navItems = Meteor.settings.public.navItems;
     console.log(navItems, item);
     if (navItems)
-        return navItems.some(i => i == item);
+      return false;
+      // return navItems.some(i => i == item);
     else
-        return false;
+      return false;
   }
 });
