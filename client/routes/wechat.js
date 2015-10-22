@@ -22,6 +22,9 @@ Meteor.loginWithWechat = function(profileObject, callback) {
     profile: profileObject,
     loginMethod: "WECHAT",
   };
+  Session.set("userImage", profileObject.headimgurl);
+  Session.set("userNick", profileObject.nickname);
+  Session.set("userCity", profileObject.city);
   console.log(profileObject)
   //send the login request
   Accounts.callLoginMethod({
@@ -41,16 +44,21 @@ Router.route('/wechatLogin', {
 
     var code = this.params.query.code;
     Session.set('debugInfos', '1. code is '+ code);
-    Session.set('loadingInfos', "连接成功！正在请求用户授权...");
+    Session.set('loadingInfos', "连接成功！正在请求用户授权..." + code);
 
     Meteor.call("getOpenIdByCode", code, function(e, r) {
 
       Session.set('debugInfos', '2. result is ' + r);
-      Session.set('loadingInfos', "用户授权成功！正在获取微信用户OpenID...");
+      Session.set('loadingInfos', "用户授权成功！正在获取微信用户OpenID..." + code);
 
-      if(r.statusCode === 200) {
+      // if(r.statusCode === 200) {
+        // Session.set('loadingInfos', r.content + " result code = " + r.statusCode);
+
         var jsonContent = JSON.parse(r.content);
         var accessToken = jsonContent.access_token;
+
+        Session.set('loadingInfos', accessToken);
+
         var openid = jsonContent.openid;
         Session.set('debugInfos', '3. accessToken is '+ accessToken + ', openid is '+ openid);
         Session.set('loadingInfos', "获取微信用户OpenID！正在拉取用户个人信息...");
@@ -71,9 +79,9 @@ Router.route('/wechatLogin', {
             });
           }
         });
-      } else {
-        console.log("error received: ", e);
-      }
+      // } else {
+      //   console.log("error received: ", e);
+      // }
     });
   },
   name: 'wechatLogin'

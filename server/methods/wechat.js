@@ -26,9 +26,11 @@ Meteor.methods({
     this.unblock();
     try {
       var result = HTTP.call("GET", url);
+      console.log(result);
       return result;
     } catch (e) {
       // Got a network error, time-out or HTTP error in the 400 or 500 range.
+      console.log("error getOpenId" + e);
       return "error getOpenId: " + e;
     };
   },
