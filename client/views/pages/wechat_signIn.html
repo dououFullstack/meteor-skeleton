@@ -1,12 +1,7 @@
 <template name="wechatLogin">
 
     {{#if currentUser}}
-      <button data-action="sign-out" class="button button-positive sign-in-button">
-        退出
-<!--       <div class="pull-left">
-      欢迎你, {{currentUser.username}},
-      </div> -->
-      </button>
+      <!-- <button data-action="sign-out" class="button button-positive sign-in-button">退出</button> -->
     {{else}}
 <!--       <button data-action="sign-in" class="button button-positive sign-in-button">
         登录
@@ -14,10 +9,8 @@
     {{/if}}
 
 
-    <p>loadingInfo:{{showLoadingInfos}} </p>
-    <p>
-      debugInfo:{{debugInfos}}
-    </p>
+    <!-- <p>loadingInfo:{{showLoadingInfos}} </p> -->
+    <!-- <p>debugInfo:{{debugInfos}}</p> -->
 
 
       {{#if currentUser}}
@@ -26,7 +19,7 @@
         <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
           <div id="fast-login-block">
             <div>
-              <a class="btn btn-lg btn-weixin " id="weixin_internal_login" href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx3175e8b7a6a40895&redirect_uri=http://www.msdn.xin:2000/wechatLogin&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect"><i class="fa fa-weixin fa-lg pull-left"></i>微信一键登录</a>
+              <a class="btn btn-lg btn-primary btn-weixin " id="weixin_internal_login" href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx3175e8b7a6a40895&redirect_uri=http://example.maodou.io/wechatLogin&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect"><i class="fa fa-weixin fa-lg pull-left"></i>微信一键登录</a>
             </div>
     <!--
             <div>

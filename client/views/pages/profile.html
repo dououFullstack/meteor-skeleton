@@ -1,7 +1,7 @@
 <template name="profileCard">
   <div class="profileInfo">
-    {{#with profile}}       
-        <img class="profileImg animated fadeInUp" src="{{headimgurl}}">
+    {{#with profile}}
+        <img class="profileImg animated fadeInUp" src="{{headimgurl}}" style="display: block;width: 96px; height: 96px;">
         <h2>{{nickname}}</h2>
         <p> {{province}} {{city}} @{{country}} </p>
     {{/with}}
@@ -16,13 +16,13 @@
           退出</button></div>
 
         {{#if currentUser}}
-            {{#with currentUser}}   
+            {{#with currentUser}}
               <!-- <p class="pull-right">{{username}}, {{_id}}</p> -->
               {{> profileCard profile=profile}}
-            {{/with}} 
+            {{/with}}
               <!-- show two Lists -->
-        {{else}} 
-          {{> wechatLogin}}  
+        {{else}}
+          {{> wechatLogin}}
         {{/if}}
 
       </div>
