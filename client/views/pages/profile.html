@@ -4,6 +4,7 @@
         <img class="profileImg animated fadeInUp" src="{{headimgurl}}" style="display: block;width: 100%;">
         <h2 class="text-center">{{nickname}}</h2>
         <p class="text-center"> {{province}} {{city}} @{{country}} </p>
+        <div class="log_out_button text-center"><button data-action="sign-out" class=" btn btn-primary button-energized sign-in-button text-center">退出登陆</button></div>
     {{/with}}
   </div>
 </template>
@@ -14,7 +15,6 @@
         {{#if currentUser}}
             {{#with currentUser}}
               <!-- <p class="pull-right">{{username}}, {{_id}}</p> -->
-              <div class="log_out_button text-center btn btn-primary"><button data-action="sign-out" class="button button-small button-energized sign-in-button">退出登陆</button></div>
               {{> profileCard profile=profile}}
             {{/with}}
               <!-- show two Lists -->
