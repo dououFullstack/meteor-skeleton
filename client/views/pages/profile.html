@@ -1,7 +1,7 @@
 <template name="profileCard">
   <div class="profileInfo">
     {{#with profile}}
-        <img class="profileImg animated fadeInUp" src="{{headimgurl}}" style="display: block;width: 96px; height: 96px;">
+        <img class="profileImg animated fadeInUp" src="{{headimgurl}}" style="display: block;width: 100%;">
         <h2>{{nickname}}</h2>
         <p> {{province}} {{city}} @{{country}} </p>
     {{/with}}
@@ -12,8 +12,7 @@
       <div class="profile_header">
 
         <div class="log_out_button">
-        <button data-action="sign-out" class="button button-small button-energized sign-in-button">
-          退出</button></div>
+        <button data-action="sign-out" class="button button-small button-energized sign-in-button">退出登陆</button></div>
 
         {{#if currentUser}}
             {{#with currentUser}}
