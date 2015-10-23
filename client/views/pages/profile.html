@@ -1,10 +1,12 @@
 <template name="profileCard">
   <div class="profileInfo">
     {{#with profile}}
+      <div class="thumbnail" style="margin-top: 15px;">
         <img class="profileImg animated fadeInUp" src="{{headimgurl}}" style="display: block;width: 100%;">
-        <h2 class="text-center">{{nickname}}</h2>
-        <p class="text-center"> {{province}} {{city}} @{{country}} </p>
-        <div class="log_out_button text-center"><button data-action="sign-out" class=" btn btn-primary button-energized sign-in-button text-center">退出登陆</button></div>
+      </div>
+      <h2 class="text-center">{{nickname}}</h2>
+      <p class="text-center"> {{province}} {{city}} @{{country}} </p>
+      <!-- <div class="log_out_button text-center"><button data-action="sign-out" class=" btn btn-primary button-energized sign-in-button text-center">退出登陆</button></div> -->
     {{/with}}
   </div>
 </template>
