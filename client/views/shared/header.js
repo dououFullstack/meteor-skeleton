@@ -3,10 +3,16 @@ Template.header.helpers({
     var navItems = [];
     navItems = Meteor.settings.public.navItems;
     console.log(navItems, item);
-    if (navItems)
+    if (navItems) {
+      var idx;
+      for (idx = 0; idx < navItems.length; idx++) {
+        if (navItems[idx] == item) {
+          return true;
+        }
+      }
       return false;
-      // return navItems.some(i => i == item);
-    else
+    } else {
       return false;
+    }
   }
 });

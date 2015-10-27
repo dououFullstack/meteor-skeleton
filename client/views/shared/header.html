@@ -21,6 +21,12 @@
           {{#if navHas "posts"}}
             <li class="{{active 'postsIndex'}}"><a href="{{pathFor 'postsIndex'}}">博客</a></li>
           {{/if}}
+          {{#if navHas "activitys"}}
+            <li class="{{active 'activitysIndex'}}"><a href="{{pathFor 'activitysIndex'}}">活动</a></li>
+          {{/if}}
+          {{#if navHas "enrollments"}}
+            <li class="{{active 'enrollmentsIndex'}}"><a href="{{pathFor 'enrollmentsIndex'}}">报名</a></li>
+          {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="{{active 'about'}}"><a href="{{pathFor 'about'}}">关于我们</a></li>
