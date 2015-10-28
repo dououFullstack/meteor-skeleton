@@ -1,28 +1,27 @@
 <template name="profileCard">
-  <div class="profileInfo">
-    {{#with profile}}
-      <div class="thumbnail" style="margin-top: 15px;">
-        <img class="profileImg animated fadeInUp" src="{{headimgurl}}" style="display: block;width: 100%;">
-      </div>
-      <h2 class="text-center">{{nickname}}</h2>
-      <p class="text-center"> {{province}} {{city}} @{{country}} </p>
-      <!-- <div class="log_out_button text-center"><button data-action="sign-out" class=" btn btn-primary button-energized sign-in-button text-center">退出登陆</button></div> -->
-    {{/with}}
-  </div>
+  {{#with profile}}
+    <div class="container">
+        <div class="row">
+          <div class="alert alert-success">
+            <div class="thumbnail">
+               <img src="{{headimgurl}}" alt="通用的占位符缩略图">
+            </div>
+            <p>{{nickname}} &nbsp;<span class="glyphicon glyphicon-user"></span></p>
+            <p>{{province}} {{city}} @{{country}}</p>
+          </div>
+        </div>
+    </div>
+  {{/with}}
 </template>
 
 <template name="profile">
-      <div class="profile_header">
-
-        {{#if currentUser}}
-            {{#with currentUser}}
-              <!-- <p class="pull-right">{{username}}, {{_id}}</p> -->
-              {{> profileCard profile=profile}}
-            {{/with}}
-              <!-- show two Lists -->
-        {{else}}
-          {{> wechatLogin}}
-        {{/if}}
-
-      </div>
+  <div class="profile_header">
+    {{#if currentUser}}
+        {{#with currentUser}}
+          {{> profileCard profile=profile}}
+        {{/with}}
+    {{else}}
+      {{> wechatLogin}}
+    {{/if}}
+  </div>
 </template>
