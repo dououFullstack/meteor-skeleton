@@ -17,10 +17,12 @@ Meteor.methods({
     // var appSecret = "731a3266530c51cdb44a81f9c0f23ff0";
     var strPublic = Meteor.settings.public;
     console.log(strPublic);
-    var appId = "wx3175e8b7a6a40895";
-    var appSecret = "061a568248ed8a1b3bcf51a91b94ae03";
+    // var appId = "wx3175e8b7a6a40895";
+    // var appSecret = "061a568248ed8a1b3bcf51a91b94ae03";
     // var appId = "wx82c1c3c2d9b3832c";    // taolizhizhao
     // var appSecret = "6dc186dbe4502f530baa794503c68df5";
+    var appId = "wx35fc3ff5c073eb9b";
+    var appSecret = "1051d7ee32aa23310c0b6d8e3b12cd05";
 
     var getOpenIdUrl = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=" + appId + "&secret=" + appSecret + "&code=" + code + "&grant_type=authorization_code";
     var url = getOpenIdUrl;
