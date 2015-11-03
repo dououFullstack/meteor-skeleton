@@ -1,49 +1,46 @@
-Template.camera.helpers({
-
-});
+Template.camera.rendered = function() {
+  // 获取 signature 的方法应该写一个 Meteor.call 交给服务器处理
+  // 生成 signature 的方法参考 http://www.yanyulin.info/pages/2015/01/4299249269196.html
+  // Meteor.call("getSignature", function() {....})
+  wx.config({
+    debug: false,
+    appId: 'wx35fc3ff5c073eb9b',
+    timestamp: 1414587457,
+    nonceStr: 'Wm3WZYTPz0wzccnW',
+    signature: '59f6aefc7aa3e3af0015c34beb6b9f30f33fca59',
+    jsApiList: [
+      'checkJsApi',
+      'onMenuShareTimeline',
+      'onMenuShareAppMessage',
+      'onMenuShareQQ',
+      'onMenuShareWeibo',
+      'hideMenuItems',
+      'chooseImage',
+      'uploadImage'
+    ]
+  });
+  wx.ready(function () {});
+};
 
 Template.camera.events({
+  // 可以不同按钮响应微信提供的其他接口
   'click #camera': function() {
-    wx.config({
-			debug: true,
-			appId: 'wx35fc3ff5c073eb9b',
-			timestamp: 7200,
-			nonceStr: 'nmgwddj',
-			signature: '74d88b4ddaacbe22a4c143c2c4aa279e832674fd',
-			jsApiList: ['chooseImage','getLocation','getNetworkType','scanQRCode','hideOptionMenu']
-		});
-    wx.ready(function() {
-			wx.checkJsApi({
-				jsApiList: ['getNetworkType','chooseImage','getLocation','scanQRCode','hideOptionMenu'],
-				success: function(res) {
-					alert('checkJSAPI');
-					wx.hideOptionMenu();
-
-					// wx.getNetworkType({
-					// 	success: function (res) {
-					// 		//alert(res);
-					// 		var networkType = res.networkType; // 返回网络类型2g，3g，4g，wifi
-					// 		alert("getNetworkType: " + networkType);
-					// 	}
-					// });
-          //
-					// wx.scanQRCode({
-					// 	needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-					// 	scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
-					// 	success: function (res) {
-					// 		alert(res);
-					// 		var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
-					// 	}
-					// });
-          //
-					// wx.chooseImage({
-					// 	success: function (res) {
-					// 		alert(res);
-					// 		var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
-					// 	}
-					// });
-				}
-			});
-		});
+    var nuanxinImages = {
+      localId:  [],
+      serverId: []
+    };
+    wx.chooseImage({
+      success: function (res) {
+        nuanxinImages.localId = res.localIds;
+        var html_content = ''
+        var i = 0;
+        while(i < res.localIds.length)
+        {
+          html_content = html_content + '<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3"><a href="#" class="thumbnail"><img src="' + nuanxinImages.localId[i] + '"></a></div>';
+          i++;
+        }
+        document.getElementById("photo").innerHTML = html_content;
+      }
+    });
   }
 });
