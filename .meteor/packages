@@ -28,6 +28,9 @@ spacebars
 check
 http
 fortawesome:fontawesome
-maodouio:posts-summernote
-maodouio:friend
-maodouio:group
+#maodouio:posts-summernote
+#maodouio:friend
+#maodouio:group
+maodouio:activities-file
+twbs:bootstrap
+bootswatch:paper
