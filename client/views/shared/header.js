@@ -4,11 +4,8 @@ Template.header.helpers({
     navItems = Meteor.settings.public.navItems;
     console.log(navItems, item);
     if (navItems) {
-      var idx;
-      for (idx = 0; idx < navItems.length; idx++) {
-        if (navItems[idx] == item) {
-          return true;
-        }
+      if (navItems.indexOf(item) >= 0) {
+        return true;
       }
       return false;
     } else {
