@@ -11,5 +11,8 @@ Template.header.helpers({
     } else {
       return false;
     }
+  },
+  getTitle: function() {
+    return Meteor.settings.public.title;
   }
 });
