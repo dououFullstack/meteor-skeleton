@@ -1,0 +1,11 @@
+<template name="profile">
+  {{#if loggingIn}}
+    {{> loading}}
+  {{else}}
+    {{#if currentUser}}
+      {{> profileCard profile=currentUser}}
+    {{else}}
+      {{> wechatLogin loginType='profile'}}
+    {{/if}}
+  {{/if}}
+</template>

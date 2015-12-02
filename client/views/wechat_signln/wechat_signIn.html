@@ -1,0 +1,15 @@
+<template name="wechatLogin">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 text-center">
+				<div id="fast-login-block">
+					<div>
+						<h1 class="header-title">&nbsp;</h1>
+						<a class="btn btn-lg btn-primary btn-weixin text-center" id="weixin_internal_login" href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe9a58f7343f24cd1&redirect_uri=http://x-lab.maodou.io/wechatLogin&response_type=code&scope=snsapi_userinfo&state={{loginType}}#wechat_redirect">
+							<i class="fa fa-weixin fa-lg pull-left"></i>微信一键登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

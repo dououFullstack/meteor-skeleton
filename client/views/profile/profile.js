@@ -6,4 +6,8 @@ Template.profile.created = function () {
 
 Template.profile.rendered = function () {
 
-}
+};
+
+Template.profile.rendered = function() {
+
+};

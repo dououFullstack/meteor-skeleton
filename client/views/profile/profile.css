@@ -1,0 +1,197 @@
+/* CSS declarations go here */
+/*html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, fieldset, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+    font-size: 100%;
+}*/
+
+a, button, :focus, a:focus, button:focus, a:active, a:hover {
+    outline: 0;
+}
+
+a {
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+.rotateIn {
+    -webkit-animation-name: rotateIn;
+    animation-name: rotateIn;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.button {
+    border-color: #b2b2b2;
+    background-color: #8BB3E6;
+    color: #444;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    vertical-align: top;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+.profile-header {
+  width: 100%;
+  height: 205px;
+  background-color: #8dd1c2;
+}
+
+.log_out_button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border: none;
+    opacity: 0.85;
+}
+
+.button.button-energized.active, .button.button-energized.activated {
+    border-color: #e6a33f;
+    background-color: #e6a33f;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-small {
+    padding: 2px 4px 1px;
+    min-width: 28px;
+    min-height: 30px;
+    font-size: 12px;
+    line-height: 26px;
+}
+
+.profileImg {
+    width: ˊ80px;
+    height: 80px;
+    border: solid white 3px;
+    border-radius: 50%;
+    margin-top: 40px;
+    box-shadow: 5px 3px 5px 0 rgba(0, 0, 0, 0.30);
+}
+
+.profileInfo {
+    text-align: center;
+}
+
+.profileInfo h2 {
+    font-size: 18px;
+    margin: 5px;
+    color: white;
+}
+
+.profileInfo p {
+    font-size: 12px;
+    color: white;
+}
+
+.edit-link {
+    display: block;
+    padding-top:5px;
+    padding-right: 20px;
+}
+
+.edit-link img {
+    display: block;
+    float: right;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.vari_button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    margin-left: -20px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #424242;
+    padding-top: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.dark, a.dark {
+    color: #444;
+}
+
+.profile-info {
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.leftSide {
+    top: 80px;
+    left: 13%;
+}
+
+.button_icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 4px;
+    box-shadow: 2px 1px 3px 0 rgba(0, 0, 0, 0.30);
+}
+
+.leftSide h3 {
+    font-size: 14px;
+    color: #6d92a2;
+    margin: 5px;
+}
+
+.rightSide {
+    top: 80px;
+    right: 13%;
+}
+
+.rightSide h3 {
+    font-size: 14px;
+    color: #6d92a2;
+    margin: 5px;
+}
+
+.leftSide2 {
+    top: 200px;
+    left: 13%;
+}
+
+.leftSide2 h3 {
+    font-size: 14px;
+    color: #6d92a2;
+    margin: 5px;
+}
+
+.rightSide2 {
+    top: 200px;
+    right: 13%;
+}
+
+.rightSide2 h3 {
+    font-size: 14px;
+    color: #6d92a2;
+    margin: 5px;
+}
+
+/**/

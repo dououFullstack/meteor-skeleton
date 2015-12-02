@@ -1,0 +1,85 @@
+<template name="userProfileEdit">
+  <div class="container">
+
+  {{#if this}}
+    <div class="row user-edit">
+      <h4><b>完善个人信息</b></h4>
+      {{#autoForm collection="UserProfiles" doc=this id="userForm" type="update"}}
+        <fieldset>
+          {{> afQuickField name='name'}}
+          {{> afQuickField name='gender' firstOption="（选择性别）" options="allowed"}}
+          {{> afQuickField name='birthday'}}
+          {{> afQuickField name='cellNumber'}}
+          {{> afQuickField name='email'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a class="btn btn-link" role="button" href="{{pathFor 'usersIndex'}}">Back</a>
+      {{/autoForm}}
+    </div>
+  {{else}}
+    <div class="row user-edit">
+      <h4><b>创建个人信息</b></h4>
+      {{#autoForm collection="UserProfiles" doc=this id="userForm" type="insert"}}
+        <fieldset>
+          {{> afQuickField name='name'}}
+          {{> afQuickField name='gender' firstOption="（选择性别）" options="allowed"}}
+          {{> afQuickField name='birthday'}}
+          {{> afQuickField name='cellNumber'}}
+          {{> afQuickField name='email'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">New</button>
+        <a class="btn btn-link" role="button" href="{{pathFor 'userIndex'}}">Back</a>
+      {{/autoForm}}
+    </div>
+  {{/if}}
+
+  </div>
+</template>
+
+<template name="userProfileShow">
+  <div class="container">
+
+    <div class="row user-edit">
+      <h4><b>个人信息</b></h4>
+          <ul class="sActList" style="padding-left: 0px;">
+              <li>
+                  <span class="sActListIcon glyphicon glyphicon-font"></span>
+                  <span>姓名：</span>
+                  <span>{{name}}</span>
+              </li>
+              <li>
+                  <!-- <img src="/icons/seat@2x.png" class="sActListIcon"> -->
+                  <span class="sActListIcon glyphicon glyphicon-user"></span>
+                  <span>性别：</span>
+                  <span>{{gender}}</span>
+              </li>
+              <li>
+                  <!-- <img src="/icons/ticket@2x.png" class="sActListIcon"> -->
+                  <span class="sActListIcon glyphicon glyphicon-calendar"></span>
+                  <span>生日：</span>
+                  <span>{{formatdatetime birthday}}</span>
+              </li>
+              <li>
+                  <!-- <img src="/icons/map@2x.png" class="sActListIcon"> -->
+                  <span class="sActListIcon glyphicon glyphicon-phone-alt"></span>
+                  <span>联系方式：</span>
+                  <span>{{cellNumber}}</span>
+              </li>
+              <li>
+                  <!-- <img src="/icons/map@2x.png" class="sActListIcon"> -->
+                  <span class="sActListIcon glyphicon glyphicon-envelope "></span>
+                  <span>邮箱地址：</span>
+                  <span>{{email}}</span>
+              </li>
+              <li style="padding-left: 10px; display: none;">
+              <!-- <li style="padding-left: 10px; visibility:hidden;"> -->
+              <!-- <li style="padding-left: 10px;"> -->
+                  <a class="btn btn-sm btn-default" href="{{pathFor 'activitiesIndex'}}" role="button">返回</a>
+                  <a class="btn btn-sm btn-default" href="{{pathFor 'activityEdit'}}" role="button" style="margin-right: 10px; margin-left: 10px;">编辑</a>
+                  <a class="btn btn-sm btn-danger delete-activitie" href="#" role="button">删除</a>
+              </li>
+          </ul>
+        <button type="button" name="button"><a class="btn btn-link" role="button" href="/profile">Back</a></button>
+    </div>
+  </div>
+</template>

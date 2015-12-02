@@ -1,0 +1,27 @@
+<template name="userIndex">
+	<div>
+		<div>
+			<div class="userList" style="overflow: auto;">
+				{{#each users}}
+					<div class="userBoxList">
+						<div class="userBox">
+							<a href="{{pathFor 'userShow'}}"><img src="{{profile.headimgurl}}" class="userPhoto" height="96" width="96"></a>
+							<a href="{{pathFor 'userShow'}}"><p class="userName">{{profile.nickname}}</p></a>
+							<p class="userLabel">{{profile.country}} </p>
+							<p class="userLabel">注册日期:{{formatDate createdAt}}</p>
+							<a class="userLabel" href="{{pathFor 'userProfileEdit'}}" role="button">编辑</a>
+							<a class="userLabel delete-user" href="#" role="button">删除</a> <br/>
+							{{#if isAdmin}}
+							<p class="userLabel">已是管理员</p>
+							{{else}}
+							<a class="userLabel set-admin" href="#" role="button">提升为管理员</a>
+							{{/if}}
+						</div>
+					</div>
+				{{else}}
+					暂无用户
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</template>
