@@ -3,8 +3,8 @@
 // ***************************************************************
 
 Meteor.startup(function () {
-  appId       = "wxe9a58f7343f24cd1";
-  appSecret   = "3e28209cef04529cdca5f7d0f7515393";
+  appId       = Meteor.settings.public.appId; //"wxe9a58f7343f24cd1";
+  appSecret   = Meteor.settings.public.appSecret; //"3e28209cef04529cdca5f7d0f7515393";
   accessToken = "";
   ticket      = "";
   signature   = "";
