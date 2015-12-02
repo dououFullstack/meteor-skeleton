@@ -5,7 +5,7 @@
 				<div id="fast-login-block">
 					<div>
 						<h1 class="header-title">&nbsp;</h1>
-						<a class="btn btn-lg btn-primary btn-weixin text-center" id="weixin_internal_login" href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe9a58f7343f24cd1&redirect_uri=http://x-lab.maodou.io/wechatLogin&response_type=code&scope=snsapi_userinfo&state={{loginType}}#wechat_redirect">
+						<a class="btn btn-lg btn-primary btn-weixin text-center" id="weixin_internal_login" href="https://open.weixin.qq.com/connect/oauth2/authorize?appid={{getAppId}}&redirect_uri=http://{{getCallBackUrl}}/wechatLogin&response_type=code&scope=snsapi_userinfo&state={{loginType}}#wechat_redirect">
 							<i class="fa fa-weixin fa-lg pull-left"></i>微信一键登录</a>
 					</div>
 				</div>
