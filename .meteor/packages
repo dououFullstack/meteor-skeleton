@@ -33,6 +33,7 @@ jparker:crypto-sha1
 accounts-ui
 accounts-password
 mrt:momentjs
+maodouio:logs
 
 #twbs:bootstrap
 #maodouio:activities-composite
