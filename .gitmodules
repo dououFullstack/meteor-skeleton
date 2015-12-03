@@ -1,0 +1,21 @@
+[submodule "packages/meteor-activities-composite"]
+	path = packages/meteor-activities-composite
+	url = https://github.com/maodouio/meteor-activities-composite
+[submodule "packages/meteor-activity-comments"]
+	path = packages/meteor-activity-comments
+	url = https://github.com/maodouio/meteor-activity-comments
+[submodule "packages/meteor-activity-likes"]
+	path = packages/meteor-activity-likes
+	url = https://github.com/maodouio/meteor-activity-likes
+[submodule "packages/meteor-activity-enrollments"]
+	path = packages/meteor-activity-enrollments
+	url = https://github.com/maodouio/meteor-activity-enrollments
+[submodule "packages/meteor-activity-registrations"]
+	path = packages/meteor-activity-registrations
+	url = https://github.com/maodouio/meteor-activity-registrations
+[submodule "packages/meteor-activity-statistics"]
+	path = packages/meteor-activity-statistics
+	url = https://github.com/maodouio/meteor-activity-statistics
+[submodule "packages/meteor-activity-notifications"]
+	path = packages/meteor-activity-notifications
+	url = https://github.com/maodouio/meteor-activity-notifications
