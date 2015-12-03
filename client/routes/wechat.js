@@ -6,8 +6,8 @@ Router.route('/wechat-config', function () {
 
 Meteor.loginWithWechat = function(profileObject, callback) {
   var loginRequest = {
-    // 用户 unionid 作为 username，防止冲突情况出现
-    username: profileObject.unionid,
+    // 用户 openid 作为 username，防止冲突情况出现
+    username: profileObject.openid,
     openid: profileObject.openid,
     profile: profileObject,
     loginMethod: "WECHAT",

@@ -57,10 +57,10 @@ Accounts.registerLoginHandler(function(loginRequest) {
   console.log('registerLoginHandler loginRequest is ');
   console.log(loginRequest);
 
-  var unionid = loginRequest.username;
-  console.log('registerLoginHandler unionid is ', unionid);
+  var openid = loginRequest.username;
+  console.log('registerLoginHandler openid is ', openid);
 
-  if(!unionid) {
+  if(!openid) {
     return undefined;
   }
 
@@ -68,7 +68,7 @@ Accounts.registerLoginHandler(function(loginRequest) {
 
   //we create a admin user if not exists, and get the userId
   var userId = null;
-  var user = Meteor.users.findOne({username: unionid});
+  var user = Meteor.users.findOne({username: openid});
 
   console.log('user is ', user);
   if(!user) {
