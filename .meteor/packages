@@ -35,7 +35,7 @@ accounts-password
 mrt:momentjs
 maodouio:logs
 
-#twbs:bootstrap
+twbs:bootstrap
 #maodouio:activities-composite
 #maodouio:activity-enrollments
 #maodouio:activity-comments
@@ -43,3 +43,4 @@ maodouio:logs
 #maodouio:activity-notifications
 #maodouio:activity-registrations
 #maodouio:activity-statistics
+yogiben:autoform-map

@@ -1,5 +1,5 @@
 <template name="documentsIndex">
-  <div class="row">
+  <div class="container">
     <div class="col-md-12">
       <h1>Documents</h1>
       <a class="btn btn-primary" href="{{pathFor 'documentNew'}}" role="button">New document</a>
@@ -20,6 +20,9 @@
             <td>{{content}}</td>
             <td>{{showTimeAgo updatedAt}}</td>
             <td>{{showPrettyTimestamp createdAt}}</td>
+            <td>{{file}}</td>
+            <td>{{location}}</td>
+
             <td>
               <a class="btn btn-xs btn-default" href="{{pathFor 'documentEdit'}}" role="button">Edit</a>
               <a class="btn btn-xs btn-danger delete-document" href="#" role="button">Delete</a>

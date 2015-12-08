@@ -5,17 +5,17 @@
 if (Documents.find().count() === 0) {
 
   Documents.insert({
-    title: "Derp",
+    title: "星期一",
     content: "Lorem ipsum, herp derp durr."
   });
 
   Documents.insert({
-    title: "Hurr",
+    title: "星期二",
     content: "Lorem ipsum, herp derp durr."
   });
 
   Documents.insert({
-    title: "Durr",
+    title: "星期三",
     content: "Lorem ipsum, herp derp durr."
   });
 
